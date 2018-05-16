@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Student_Interface.Class;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,19 @@ namespace Student_Interface
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Enter Name: ");
+            string name = Console.ReadLine();
+            Console.WriteLine("------------------");
+            Console.WriteLine("Enter Full Name:");
+            string fullname = Console.ReadLine();
+            Student student = new Student(name, fullname);
+            student.GetAvgGrade();
+            student.GetName();
+            student.GetFullName();
+            Console.Clear();
+            student.ShowInfo();
+
+
         }
     }
 }
